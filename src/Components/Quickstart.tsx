@@ -11,7 +11,7 @@ const Quickstart = () => {
 
   return (
     <div>
-      <div className="flex items-start justify-center h-full p-2 overflow-y-auto rounded bg-mainBlack [&::-webkit-scrollbar]:w-2
+      <div className="flex items-start justify-center h-full p-5 overflow-y-auto rounded bg-mainBlack [&::-webkit-scrollbar]:w-2
       [&::-webkit-scrollbar-track]:rounded-full
       [&::-webkit-scrollbar-track]:bg-gray-100
       [&::-webkit-scrollbar-thumb]:rounded-full
@@ -33,12 +33,12 @@ const Quickstart = () => {
                 <h2 className="pb-5 text-2xl">Create and export an API key </h2>
                 <p className="font-light"><span className="text-Lightgreen">Create an API key in the dashboard here</span>, which you’ll use to securely <span className="text-Lightgreen"> access the API</span>. Store the key in a safe location, span like a <a className="text-Lightgreen"> .zshrc file </a>or another text file on your computer. Once you’ve generated an API key, export it as an <span className="text-Lightgreen">environment variable</span>  in your terminal.</p>
                 <div className="flex mt-4 space-x-4 the_buttons">
-                 <div className='bg-slate-500'>
+                 <div className='p-1 bg-black rounded-md'>
                   <button
                     onClick={() => handleButtonClick('macos_linux')}
-                    className={`px-4 py-2 rounded ${
+                    className={`px-3 py-1 rounded ${
                       activeButton === 'macos_linux'
-                        ? 'bg-green-500 text-white' // Active button style
+                        ? 'bg-secMainBlack text-white' // Active button style
                         : 'bg-black text-white' // Inactive button style
                     }`}
                   >
@@ -46,9 +46,9 @@ const Quickstart = () => {
                   </button>
                   <button
                     onClick={() => handleButtonClick('windows')}
-                    className={`px-4 py-2 rounded ${
+                    className={`px-3 py-1 rounded ${
                       activeButton === 'windows'
-                        ? 'bg-green-500 text-white' // Active button style
+                        ? 'bg-secMainBlack text-white' // Active button style
                         : 'bg-black text-white' // Inactive button style
                     }`}
                   >
@@ -58,10 +58,13 @@ const Quickstart = () => {
                  
 
                 </div>
+                <div>
+                  
+                </div>
                 <div className="mt-5 content-box">
                   {content === 'macos_linux' && (
                     <div>
-                      <h3 className="text-xl font-semibold">Export an environment variable on macOS or Linux system</h3>
+                      <h3 className="text-lg font-semibold">Export an environment variable on macOS or Linux system</h3>
                       <p className="p-2 mt-2 font-mono text-white bg-gray-800 rounded">
                         1. <code>export OPENAIL_API_KEY="your_api_key_here"</code>
                       </p>
@@ -69,7 +72,7 @@ const Quickstart = () => {
                   )}
                   {content === 'windows' && (
                     <div>
-                      <h3 className="text-xl font-semibold">Export an environment variable on Windows system</h3>
+                      <h3 className="text-lg font-semibold">Export an environment variable on Windows system</h3>
                       <p className="p-2 mt-2 font-mono text-white bg-gray-800 rounded">
                         1. <code>set OPENAIL_API_KEY="your_api_key_here"</code>
                       </p>
