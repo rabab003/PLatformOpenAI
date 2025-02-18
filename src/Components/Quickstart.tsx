@@ -11,7 +11,7 @@ const Quickstart = () => {
 
   return (
     <div>
-      <div className="flex items-start justify-center h-full p-5 overflow-y-auto rounded bg-mainBlack [&::-webkit-scrollbar]:w-2
+      <div className="flex items-start justify-center h-full p-5  rounded bg-mainBlack [&::-webkit-scrollbar]:w-2
       [&::-webkit-scrollbar-track]:rounded-full
       [&::-webkit-scrollbar-track]:bg-gray-100
       [&::-webkit-scrollbar-thumb]:rounded-full
@@ -24,7 +24,7 @@ const Quickstart = () => {
           <div>
 
             <h1 className="text-3xl font-semibold">Developer quickstart</h1>
-            <h3 className="py-2 text-xl text-darkText">Learn how to make your first API request.</h3>
+            <h3 className="py-2 text-base text-darkText">Learn how to make your first API request.</h3>
             <p className="text-[15px] pt-7">The OpenAI API provides a simple interface to state-of-the-art AI <span className="text-Lightgreen">models</span>  for natural language processing, image generation, semantic search, and speech recognition. Follow this guide to learn how to generate human-like responses to <span className="text-Lightgreen">natural language prompts, create vector embeddings </span> for semantic search, and <span className="text-Lightgreen"> generate images </span> from textual descriptions.</p>
 
 
@@ -38,8 +38,8 @@ const Quickstart = () => {
                     onClick={() => handleButtonClick('macos_linux')}
                     className={`px-3 py-1 rounded ${
                       activeButton === 'macos_linux'
-                        ? 'bg-secMainBlack text-white' // Active button style
-                        : 'bg-black text-white' // Inactive button style
+                        ? 'bg-whiteGrey text-white'
+                        : 'bg-black text-white'
                     }`}
                   >
                     macOS/Linux
@@ -48,7 +48,7 @@ const Quickstart = () => {
                     onClick={() => handleButtonClick('windows')}
                     className={`px-3 py-1 rounded ${
                       activeButton === 'windows'
-                        ? 'bg-secMainBlack text-white' // Active button style
+                        ? 'bg-whiteGrey text-white' // Active button style
                         : 'bg-black text-white' // Inactive button style
                     }`}
                   >
@@ -63,9 +63,9 @@ const Quickstart = () => {
                 </div>
                 <div className="mt-5 content-box">
                   {content === 'macos_linux' && (
-                    <div>
-                      <h3 className="text-lg font-semibold">Export an environment variable on macOS or Linux system</h3>
-                      <p className="p-2 mt-2 font-mono text-white bg-gray-800 rounded">
+                    <div className=''>
+                      <h3 className="text-lg font-semibold ">Export an environment variable on macOS or Linux system</h3>
+                      <p className="p-3 mt-2 font-mono text-white bg-gray-800 rounded w-fit">
                         1. <code>export OPENAIL_API_KEY="your_api_key_here"</code>
                       </p>
                     </div>
@@ -73,7 +73,7 @@ const Quickstart = () => {
                   {content === 'windows' && (
                     <div>
                       <h3 className="text-lg font-semibold">Export an environment variable on Windows system</h3>
-                      <p className="p-2 mt-2 font-mono text-white bg-gray-800 rounded">
+                      <p className="p-3 mt-2 font-mono text-white bg-gray-800 rounded w-fit">
                         1. <code>set OPENAIL_API_KEY="your_api_key_here"</code>
                       </p>
                     </div>
@@ -81,7 +81,12 @@ const Quickstart = () => {
                 </div>
               </div>
 
-              <div>Make your first API request</div>
+              <div className='pt-8'>
+                <h2 className='pb-3 text-2xl font-bold'>Make your first API request</h2>
+                <p className='text-darkText'>With your OpenAI API key exported as an environment variable, you're ready to make your first API request. You can either use the <a href='#' className='text-green'>REST API</a>  directly with the HTTP client of your choice, or use one of our <a href="" className='text-green'> official SDKs</a> as shown below.</p>
+                
+              </div>
+
               <div>Next steps</div>              
             </div>
 
