@@ -11,7 +11,7 @@ const Quickstart = () => {
 
   return (
     <div className=''>
-      <div className="flex md:p-12 items-start justify-center p-5 rounded bg-mainBlack overflow-y-scroll h-full [&::-webkit-scrollbar]:w-2
+      <div className="flex md:p-12 items-start p-5 rounded bg-mainBlack overflow-y-scroll h-full [&::-webkit-scrollbar]:w-2
       [&::-webkit-scrollbar-track]:rounded-full
       [&::-webkit-scrollbar-track]:bg-gray-100
       [&::-webkit-scrollbar-thumb]:rounded-full
@@ -19,7 +19,7 @@ const Quickstart = () => {
       dark:[&::-webkit-scrollbar-track]:bg-neutral-700
       dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500">
 
-        <div className="flex flex-col md:flex-row ">
+        <div className="flex flex-col lg:w-4/5 md:flex-row ">
 
           <div>
 
@@ -92,10 +92,10 @@ const Quickstart = () => {
 
           </div>   
 
-          <div className="hidden lg:block">
-            <h1>Create and export an API key</h1>
-            <h1> Make your first API request</h1>
-            <h1>Next steps</h1>
+          <div className="hidden text-[13px] font-bold w-full lg:block">
+            <h1 className='p-2'>Create and export an API key</h1>
+            <h1 className='p-2'> Make your first API request</h1>
+            <h1 className='p-2'>Next steps</h1>
           </div>     
         </div>
 
