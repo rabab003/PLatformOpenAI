@@ -48,8 +48,8 @@ const Quickstart = () => {
                     onClick={() => handleButtonClick('windows')}
                     className={`px-3 py-1 rounded ${
                       activeButton === 'windows'
-                        ? 'bg-whiteGrey text-white' // Active button style
-                        : 'bg-black text-white' // Inactive button style
+                        ? 'bg-whiteGrey text-white'
+                        : 'bg-black text-white' 
                     }`}
                   >
                     Windows
