@@ -10,6 +10,4 @@ A **work-in-progress** rebuild of the OpenAI Platform documentation using **Type
 - Dynamic routing using **React Router DOM**.
 - Dark mode support.
 - Reusable, modular components.
-- TypeScript for type safety.
-
 ---
